@@ -1,0 +1,12 @@
+[{
+  Nom : 'Air-Squat',
+  Metadata : [
+    "Cuisse",
+  ]
+},
+{
+  Nom : 'Push-up',
+  Metadata : [
+    "Bras",
+  ]
+}]

@@ -20,8 +20,9 @@
     "standard": "*"
   },
   "standard": {
-    "ignore": [
-      // file.js
-    ]
+    "ignore": []
+  },
+  "dependencies": {
+    "mongodb": "^2.2.16"
   }
 }
