@@ -2,12 +2,24 @@
   "Nom" : "Air-Squat",
   "Metadata" : [
     "Cuisse",
+    "Squat"
+  ],
+  "Difficulte" : 0,
+  "Vitesse" : 1
+},
+{
+  "Nom" : "Back-Squat",
+  "Metadata" : [
+    "Cuisse",
     "Squat",
-  ]
+    "Charge"
+  ],
+  "Difficulte": 20
 },
 {
   "Nom" : "Push-up",
   "Metadata" : [
-    "Bras",
-  ]
+    "Bras"
+  ],
+  "Difficulte": 30
 }]
