@@ -1,14 +1,16 @@
-var tmp = 0
-console.log(tmp)
-var http = require('http')
+var express = require('express')
+var bodyParser = require('body-parser')
+var app = express()
 
-var express = require('express');
+// parse to json
+app.use(bodyParser.json())
 
-var app = express();
+app.post('/login', function (req, res) {
+  if (!req.body) return res.sendStatus(400)
 
-app.get('/', function(req, res) {
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Vous êtes à l\'accueil');
-});
+  console.log(req.body)
+  res.send('welcome, ' + req.body.username)
+})
 
-app.listen(8080);
+console.log('Listening port 8080')
+app.listen(8080)
