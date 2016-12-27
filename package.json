@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/Mat67/WODGenerator#readme",
   "devDependencies": {
-    "jscs": "^3.0.7"
+    "standard": "*"
+  },
+  "standard": {
+    "ignore": [
+      // file.js
+    ]
   }
 }
