@@ -1,20 +1,20 @@
-// var random = require('random-js')
+var random = require('random-js')
 
 function Wod () {
-  this.skills = function skills () {
+  this.generateSkills = function generateSkills () {
     return this
   }
 
-  this.metcon = function metcon () {
+  this.generateMetcon = function generateMetcon () {
     return this
   }
 
-  this.echauffement = function echauffement () {
+  this.generateEchauffement = function generateEchauffement () {
     return this
   }
 
   this.build = function build () {
-    return this.skills().metcon().echauffement()
+    return this.generateSkills().generateMetcon().generateEchauffement()
   }
 }
 
