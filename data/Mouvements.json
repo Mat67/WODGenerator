@@ -1,12 +1,13 @@
 [{
-  Nom : 'Air-Squat',
-  Metadata : [
+  "Nom" : "Air-Squat",
+  "Metadata" : [
     "Cuisse",
+    "Squat",
   ]
 },
 {
-  Nom : 'Push-up',
-  Metadata : [
+  "Nom" : "Push-up",
+  "Metadata" : [
     "Bras",
   ]
 }]

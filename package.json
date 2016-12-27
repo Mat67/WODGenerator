@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests"
   },
   "repository": {
     "type": "git",
@@ -17,12 +17,16 @@
   },
   "homepage": "https://github.com/Mat67/WODGenerator#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "standard": "*"
   },
   "standard": {
-    "ignore": []
+    "ignore": [
+      "*tmp*"
+    ]
   },
   "dependencies": {
-    "mongodb": "^2.2.16"
+    "mongodb": "^2.2.16",
+    "random-js": "^1.0.8"
   }
 }
