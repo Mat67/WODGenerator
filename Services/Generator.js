@@ -1,29 +1,23 @@
-var random = require('random-js')
+// var random = require('random-js')
 
-wod = {}
+function Wod () {
+  this.skills = function skills () {
+    return this
+  }
 
-skills = function skills () {
-  return this;
+  this.metcon = function metcon () {
+    return this
+  }
+
+  this.echauffement = function echauffement () {
+    return this
+  }
+
+  this.build = function build () {
+    return this.skills().metcon().echauffement()
+  }
 }
-
-metcon = function metcon () {
-  return this;
-}
-
-echauffement = function echauffement () {
-  return this;
-}
-
-
 
 exports.build = function build (values) {
-  return skills().metcon().echauffement().wod
-  // var wod = {
-  //   Echauffement: random().integer(1, 100),
-  //   Skills: random().integer(1, 100),
-  //   Metcon: random().integer(1, 100)
-  // }
-
-
-  return wod
+  return new Wod().build()
 }

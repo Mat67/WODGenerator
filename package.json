@@ -22,7 +22,8 @@
   },
   "standard": {
     "ignore": [
-      "*tmp*"
+      "*tmp*",
+      "*test*"
     ]
   },
   "dependencies": {
