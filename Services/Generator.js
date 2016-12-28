@@ -2,6 +2,7 @@
 
 var random = require('random-js')
 var mouvements = require('./../data/mouvements')
+var mouvements = require('./../data/exercices')
 var _ = require("underscore")
 const dureeEchauffement = [5, 10]
 const dureeSkills = [20, 30]
@@ -17,7 +18,7 @@ class Exercice {
 
 
   generateExercice() {
-    this.exercices.push(_.first(mouvements))
+    this.exercices.push(mouvements[_.random(0, mouvements.length)])
   }
 }
 
