@@ -11,15 +11,16 @@ const dureeWod = 60
 class Exercice {
   constructor (duree) {
     this.duree = duree
+    this.exercices = []
   }
 
-  //this.exercices = []
 
-  // this.generateExercice() = function generateExercice () {
-  //   this.Exercice.push({
-  //     Mouvement = _.first(mouvements)
-  //   })
-  // }
+
+  generateExercice() {
+    this.exercices.push({
+      // /mouvements = _.first(mouvements)
+    })
+  }
 }
 
 class Skill extends Exercice {
