@@ -2,7 +2,7 @@
 
 var random = require('random-js')
 var mouvements = require('./../data/mouvements')
-var mouvements = require('./../data/exercices')
+var exercices = require('./../data/exercices')
 var _ = require("underscore")
 const dureeEchauffement = [5, 10]
 const dureeSkills = [20, 30]
@@ -18,7 +18,10 @@ class Exercice {
 
 
   generateExercice() {
-    this.exercices.push(mouvements[_.random(0, mouvements.length)])
+    var exercice = new exercices.exercices[_.random(0, exercices.exercices.length - 1)]()
+    exercice.addMouvements(80)
+
+    this.exercices.push(exercice)
   }
 }
 
@@ -59,18 +62,21 @@ function Wod () {
   this.generateSkills = function generateSkills () {
     this.skill = new Skill()
     this.skill.generateExercice()
-    // this.skill.duree = random().integer(dureeMin, dureeWod - this.getDureeTotal())
-    // this.skill.exercice = generateExercice(this.skill.duree)
+
     return this
   }
 
   this.generateMetcon = function generateMetcon () {
     this.metcon = new Metcon()
+    this.metcon.generateExercice()
+
     return this
   }
 
   this.generateEchauffement = function generateEchauffement () {
     this.echauffement = new Echauffement()
+    this.echauffement.generateExercice()
+
     return this
   }
 

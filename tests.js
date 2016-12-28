@@ -25,5 +25,20 @@ describe('Generator', function () {
     var resultat = generator.build()
     assert.isNotNull(resultat)
     assert.isDefined(resultat.skill.exercices)
+    assert.isAtLeast(resultat.skill.exercices.length, 1)
+  })
+
+  it('un exercice pour le metcon est généré', function () {
+    var resultat = generator.build()
+    assert.isNotNull(resultat)
+    assert.isDefined(resultat.metcon.exercices)
+    assert.isAtLeast(resultat.metcon.exercices.length, 1)
+  })
+
+  it('un exercice pour l echauffement est généré', function () {
+    var resultat = generator.build()
+    assert.isNotNull(resultat)
+    assert.isDefined(resultat.echauffement.exercices)
+    assert.isAtLeast(resultat.echauffement.exercices.length, 1)
   })
 })
