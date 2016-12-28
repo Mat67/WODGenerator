@@ -1,4 +1,4 @@
-[{
+exports.mouvements = [{
   "Nom" : "Air-Squat",
   "Metadata" : [
     "Cuisse",

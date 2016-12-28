@@ -1,25 +1,33 @@
 'use strict'
 
 var random = require('random-js')
-
+var mouvements = require('../data/Mouvements')
 const dureeMin = 5
 const dureeWod = 60
 
-class Skill {
+class Exercice {
   constructor (duree) {
     this.duree = duree
   }
+  this.duree = duree
+  this.Exercices = []
 }
 
-class Echauffement {
+class Skill extends Exercice {
   constructor (duree) {
-    this.duree = duree
+    super(duree)
   }
 }
 
-class Metcon {
+class Echauffement extends Exercice {
   constructor (duree) {
-    this.duree = duree
+    super(duree)
+  }
+}
+
+class Metcon extends Exercice {
+  constructor (duree) {
+    super(duree)
   }
 }
 
@@ -47,7 +55,19 @@ function Wod () {
     return this
   }
 
+  var generateFormat = function generateFormat() {
+
+  }
+
   this.build = function build () {
+    // Generation du format du WOD (Metcon, plusieurs skills, Duree)
+
+    // Generation du skills
+
+    // Generation du metcon
+
+    // generation de l'echauffement selon le skills et le metcon
+
     return this.generateSkills().generateMetcon().generateEchauffement()
   }
 }
