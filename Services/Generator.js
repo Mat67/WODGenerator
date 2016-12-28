@@ -1,66 +1,74 @@
 'use strict'
 
 var random = require('random-js')
-var mouvements = require('../data/Mouvements')
-const dureeMin = 5
+//var mouvements = require('../data/Mouvements')
+const dureeEchauffement = [5, 10]
+const dureeSkills = [20, 30]
+const dureeMetcon = [7, 15]
 const dureeWod = 60
 
 class Exercice {
   constructor (duree) {
     this.duree = duree
   }
-  this.duree = duree
-  this.Exercices = []
+  //this.Exercices = []
 }
 
 class Skill extends Exercice {
   constructor (duree) {
-    super(duree)
+    if (duree) {
+      super(duree)
+    }
+    else {
+      super(random().integer(dureeSkills[0], dureeSkills[1]))
+    }
   }
 }
 
 class Echauffement extends Exercice {
   constructor (duree) {
-    super(duree)
+    if (duree) {
+      super(duree)
+    }
+    else {
+      super(random().integer(dureeEchauffement[0], dureeEchauffement[1]))
+    }
   }
 }
 
 class Metcon extends Exercice {
   constructor (duree) {
-    super(duree)
+    if (duree) {
+      super(duree)
+    }
+    else {
+      super(random().integer(dureeMetcon[0], dureeMetcon[1]))
+    }
   }
 }
 
 function Wod () {
-  this.getDureeTotal = function () {
-    return (this.echauffement ? this.echauffement.duree : 0) +
-      (this.skill ? this.skill.duree : 0) +
-      (this.metcon ? this.metcon.duree : 0)
-  }
-
   this.generateSkills = function generateSkills () {
-    this.skill = new Skill(random().integer(dureeMin, dureeWod - this.getDureeTotal()))
+    this.skill = new Skill()
     // this.skill.duree = random().integer(dureeMin, dureeWod - this.getDureeTotal())
     // this.skill.exercice = generateExercice(this.skill.duree)
     return this
   }
 
   this.generateMetcon = function generateMetcon () {
-    this.metcon = new Metcon(random().integer(dureeMin, dureeWod - this.getDureeTotal()))
+    this.metcon = new Metcon()
     return this
   }
 
   this.generateEchauffement = function generateEchauffement () {
-    this.echauffement = new Echauffement(random().integer(dureeMin, dureeWod - this.getDureeTotal()))
+    this.echauffement = new Echauffement()
     return this
   }
 
-  var generateFormat = function generateFormat() {
 
-  }
 
   this.build = function build () {
-    // Generation du format du WOD (Metcon, plusieurs skills, Duree)
+    // Set des multiplicateurs selon les wods souhaité
 
     // Generation du skills
 
