@@ -17,9 +17,7 @@ class Exercice {
 
 
   generateExercice() {
-    this.exercices.push({
-      // /mouvements = _.first(mouvements)
-    })
+    this.exercices.push(_.first(mouvements))
   }
 }
 
@@ -59,6 +57,7 @@ class Metcon extends Exercice {
 function Wod () {
   this.generateSkills = function generateSkills () {
     this.skill = new Skill()
+    this.skill.generateExercice()
     // this.skill.duree = random().integer(dureeMin, dureeWod - this.getDureeTotal())
     // this.skill.exercice = generateExercice(this.skill.duree)
     return this

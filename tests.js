@@ -7,31 +7,23 @@ describe('Generator', function () {
     var resultat = generator.build()
     assert.isNotNull(resultat)
     assert.isDefined(resultat.echauffement.duree)
-
-    console.log(resultat.echauffement.duree)
   })
 
   it('Skill est generé avec une durée', function () {
     var resultat = generator.build()
     assert.isNotNull(resultat)
     assert.isDefined(resultat.skill.duree)
-
-    console.log(resultat.skill.duree)
   })
 
   it('Metcon est generé avec une durée', function () {
     var resultat = generator.build()
     assert.isNotNull(resultat)
     assert.isDefined(resultat.metcon.duree)
-
-    console.log(resultat.metcon.duree)
   })
 
   it('un exercice pour le skill est généré', function () {
     var resultat = generator.build()
     assert.isNotNull(resultat)
-    assert.isDefined(resultat.echauffement.exercice)
-
-    console.log(resultat.echauffement.exercice)
+    assert.isDefined(resultat.skill.exercices)
   })
 })
