@@ -1,7 +1,8 @@
 'use strict'
 
 var random = require('random-js')
-//var mouvements = require('../data/Mouvements')
+var mouvements = require('./../data/mouvements')
+var _ = require("underscore")
 const dureeEchauffement = [5, 10]
 const dureeSkills = [20, 30]
 const dureeMetcon = [7, 15]
@@ -11,6 +12,14 @@ class Exercice {
   constructor (duree) {
     this.duree = duree
   }
+
+  //this.exercices = []
+
+  // this.generateExercice() = function generateExercice () {
+  //   this.Exercice.push({
+  //     Mouvement = _.first(mouvements)
+  //   })
+  // }
 }
 
 class Skill extends Exercice {
