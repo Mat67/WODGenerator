@@ -11,7 +11,6 @@ class Exercice {
   constructor (duree) {
     this.duree = duree
   }
-  //this.Exercices = []
 }
 
 class Skill extends Exercice {
