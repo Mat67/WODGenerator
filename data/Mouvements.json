@@ -18,6 +18,15 @@
   "Difficulte": 20
 },
 {
+  "Nom" : "Pull-Up",
+  "Metadata" : [
+    "Bras",
+    "Gym"
+  ],
+  "Vitesse" : 2,
+  "Difficulte": 60
+},
+{
   "Nom" : "Push-up",
   "Metadata" : [
     "Bras"

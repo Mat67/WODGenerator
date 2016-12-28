@@ -1,9 +1,9 @@
 'use strict'
 var mouvementsCollection = require('./../data/mouvements')
-var _ = require("underscore")
+var _ = require('underscore')
 
 class Serie {
-  constructor() {
+  constructor () {
     this.mouvements = []
     this.duree = 0
     this.Nom = this.toString()
@@ -15,10 +15,9 @@ class Serie {
   }
 }
 
-
 exports.exercices = [
   class Emom extends Serie {
-    constructor() {
+    constructor () {
       super()
       this.duree = 60
     }
@@ -27,13 +26,13 @@ exports.exercices = [
       this.round = duree
     }
 
-    toString() {
-      return "Emom"
+    toString () {
+      return 'Emom'
     }
   },
   class E2mom extends Serie {
-    constructor() {
-      //this.duree = 120
+    constructor () {
+      // this.duree = 120
       super()
     }
 
@@ -41,19 +40,19 @@ exports.exercices = [
       this.round = duree
     }
 
-    toString() {
-      return "E2mom"
+    toString () {
+      return 'E2mom'
     }
   },
 
   class Ladder extends Serie {
-    constructor(duree) {
+    constructor (duree) {
       // A changer
-      //this.repetitions = duree
+      // this.repetitions = duree
       super()
     }
 
-    toString() {
-      return "Ladder"
+    toString () {
+      return 'Ladder'
     }
   }]
