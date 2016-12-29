@@ -1,7 +1,7 @@
 'use strict'
 
 var random = require('random-js')
-var exercices = require('data/exercices')
+var exerciceService = require('Services/exerciceService')
 var _ = require('underscore')
 const dureeEchauffement = [5, 10]
 const dureeSkills = [20, 30]
@@ -16,8 +16,9 @@ class Exercice {
   }
 
   generateExercice () {
-    var exercice = new exercices.exercices[_.random(0, exercices.exercices.length - 1)]()
-    exercice.addMouvements(this.duree)
+    var exercice = exerciceService.generateExercice()
+    //var exercice = new exercices.exercices[_.random(0, exercices.exercices.length - 1)]()
+    //exercice.addMouvements(this.duree)
 
     this.exercices.push(exercice)
   }
