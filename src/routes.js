@@ -1,4 +1,4 @@
-var service = require('./Services/Generator')
+var service = require('Services/Generator')
 
 exports.configure = function configure (app) {
   /* app.post('/api/v1/GetWOD', function (req, res) {

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha tests"
+    "start": "node app.js",
+    "test": "mocha tests.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     ]
   },
   "dependencies": {
+    "app-module-path": "^2.1.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongodb": "^2.2.16",

@@ -1,6 +1,8 @@
+require('app-module-path').addPath(__dirname + '/src');
+
 var chai = require('chai')
 var assert = chai.assert // we are using the "expect" style of Chai
-var generator = require('./Services/Generator')
+var generator = require('Services/Generator')
 
 describe('Generator', function () {
   it('Echauffement est generé avec une durée', function () {
