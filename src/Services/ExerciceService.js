@@ -1,14 +1,17 @@
 'use strict'
-var mouvementsCollection = require('data/mouvements')
-var exerciceTemplatesCollection = require('data/exerciceTemplates')
+var mouvementService = require('Services/MouvementService')
+var exerciceTemplatesCollection = require('data/ExerciceTemplates')
 var _ = require('underscore')
 
 exports.getExercice = function getExercice() {
     return exerciceTemplatesCollection[_.random(0, exerciceTemplatesCollection.length - 1)]
 }
 
-exports.generateExercice = function generateExercice() {
-    return exerciceTemplatesCollection[_.random(0, exerciceTemplatesCollection.length - 1)]
+exports.generateExercice = function generateExercice(duree, categorie, mouvement) {
+  var exercice = exports.getExercice()
+  var mouvement = mouvementService.getMouvement()
+  exercice.Mouvements.push(mouvement)
+  return exercice
 }
 
 //
