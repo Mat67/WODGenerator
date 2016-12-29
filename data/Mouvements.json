@@ -4,8 +4,15 @@
     "Cuisse",
     "Squat"
   ],
-  "Difficulte" : 0,
-  "Vitesse" : 0.75
+  "Vitesse" : 2
+},
+{
+  "Nom" : "Wall-Ball",
+  "Metadata" : [
+    "Cuisse",
+    "Squat"
+  ],
+  "Vitesse" : 4.5
 },
 {
   "Nom" : "Back-Squat",
@@ -14,8 +21,8 @@
     "Squat",
     "Charge"
   ],
-  "Vitesse" : 2,
-  "Difficulte": 20
+  "Vitesse" : 5,
+  "RM" : 100
 },
 {
   "Nom" : "Pull-Up",
@@ -23,14 +30,12 @@
     "Bras",
     "Gym"
   ],
-  "Vitesse" : 2,
-  "Difficulte": 60
+  "Vitesse" : 6
 },
 {
   "Nom" : "Push-up",
   "Metadata" : [
     "Bras"
   ],
-  "Vitesse" : 2,
-  "Difficulte": 30
+  "Vitesse" : 8
 }]

@@ -11,11 +11,13 @@ class Exercice {
   constructor (duree) {
     this.duree = duree
     this.exercices = []
+    this.facteurIntensite = 1
+    this.facteurForce = 1
   }
 
   generateExercice () {
     var exercice = new exercices.exercices[_.random(0, exercices.exercices.length - 1)]()
-    exercice.addMouvements(80)
+    exercice.addMouvements(this.duree)
 
     this.exercices.push(exercice)
   }

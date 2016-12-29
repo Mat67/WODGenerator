@@ -9,7 +9,7 @@ class Serie {
     this.Nom = this.toString()
   }
 
-  addMouvements (goal) {
+  addMouvements () {
     // goal corespond au but à atteindre (intensite, force, ...)
     this.mouvements.push(mouvementsCollection[_.random(0, mouvementsCollection.length - 1)])
   }
@@ -19,37 +19,41 @@ exports.exercices = [
   class Emom extends Serie {
     constructor () {
       super()
-      this.duree = 60
+      this.rest = 20
     }
 
-    setDuree (duree) {
-      this.round = duree
+    addMouvements () {
+      // goal corespond au but à atteindre (intensite, force, ...)
+      var mouvement = mouvementsCollection[_.random(0, mouvementsCollection.length - 1)]
+      mouvement.repetitions = _.random(1, (60 - this.rest) / mouvement['Vitesse'])
+      this.mouvements.push(mouvement)
+
+
+      var practiceTime = parseInt(mouvement.repetitions, 10) * parseInt(mouvement['Vitesse'], 10)
+
+      // On ajuste le nombre de reps
+      if (practiceTime < 60 - this.rest) {
+        // Ajout d'un mouvement
+        var mouvement2 = mouvementsCollection[_.random(0, mouvementsCollection.length - 1)]
+        mouvement.repetitions = _.random(1, practiceTime / mouvement['Vitesse'])
+        this.mouvements.push(mouvement2)
+      }
     }
 
     toString () {
       return 'Emom'
     }
   },
-  class E2mom extends Serie {
-    constructor () {
-      // this.duree = 120
-      super()
-    }
-
-    setDuree (duree) {
-      this.round = duree
-    }
-
-    toString () {
-      return 'E2mom'
-    }
-  },
 
   class Ladder extends Serie {
     constructor (duree) {
-      // A changer
-      // this.repetitions = duree
       super()
+    }
+
+    addMouvements () {
+      // goal corespond au but à atteindre (intensite, force, ...)
+      var mouvement = mouvementsCollection[_.random(0, mouvementsCollection.length - 1)]
+      this.mouvements.push(mouvement)
     }
 
     toString () {
