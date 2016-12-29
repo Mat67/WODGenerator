@@ -1,5 +1,5 @@
 'use strict'
-var mouvementsCollection = require('./../data/mouvements')
+var mouvementsCollection = require('data/mouvements')
 var _ = require('underscore')
 
 class Serie {
