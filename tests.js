@@ -1,4 +1,4 @@
-require('app-module-path').addPath(__dirname + '/src');
+require('app-module-path').addPath(__dirname + '/src')
 
 var chai = require('chai')
 var assert = chai.assert // we are using the "expect" style of Chai

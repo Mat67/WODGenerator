@@ -2,7 +2,7 @@
 
 var random = require('random-js')
 var exerciceService = require('Services/exerciceService')
-var _ = require('underscore')
+// var _ = require('underscore')
 const dureeEchauffement = [5, 10]
 const dureeSkills = [20, 30]
 const dureeMetcon = [7, 15]
@@ -17,8 +17,8 @@ class Exercice {
 
   generateExercice () {
     var exercice = exerciceService.generateExercice()
-    //var exercice = new exercices.exercices[_.random(0, exercices.exercices.length - 1)]()
-    //exercice.addMouvements(this.duree)
+    // var exercice = new exercices.exercices[_.random(0, exercices.exercices.length - 1)]()
+    // exercice.addMouvements(this.duree)
 
     this.exercices.push(exercice)
   }

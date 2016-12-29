@@ -1,4 +1,5 @@
-require('app-module-path').addPath(__dirname + '/src/')
+var path = require('path')
+require('app-module-path').addPath(path.join(__dirname, '/src/'))
 
 var express = require('express')
 var bodyParser = require('body-parser')
