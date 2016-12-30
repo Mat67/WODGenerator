@@ -3,5 +3,5 @@ var mouvementsCollection = require('data/mouvements')
 var _ = require('underscore')
 
 exports.getMouvement = function getMouvement () {
-  return mouvementsCollection[_.random(0, mouvementsCollection.length - 1)]
+  return mouvementsCollection.getData()[_.random(0, mouvementsCollection.getData().length - 1)]
 }

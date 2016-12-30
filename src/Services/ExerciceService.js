@@ -4,12 +4,13 @@ var exerciceTemplatesCollection = require('data/ExerciceTemplates')
 var _ = require('underscore')
 
 exports.getExercice = function getExercice () {
-  return exerciceTemplatesCollection[_.random(0, exerciceTemplatesCollection.length - 1)]
+  return exerciceTemplatesCollection.getData()[_.random(0, exerciceTemplatesCollection.getData().length - 1)]
 }
 
 exports.generateExercice = function generateExercice (duree, categorie) {
   var exercice = exports.getExercice()
   var mouvement = mouvementService.getMouvement()
+
   exercice.Mouvements.push(mouvement)
   return exercice
 }
